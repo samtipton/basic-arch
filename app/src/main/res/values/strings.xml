@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BasicArch</string>
+    <string name="get_image">get image</string>
+    <string name="search_recipes">Search Recipes</string>
+</resources>
