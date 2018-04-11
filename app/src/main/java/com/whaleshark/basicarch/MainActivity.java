@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 if (s.length() == 0 ) {
-                    adapter.replace(EMPTY_LIST);
+                    adapter.replace(null);
                     return;
                 }
 
