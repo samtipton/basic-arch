@@ -14,6 +14,7 @@ import com.whaleshark.basicarch.api.FoodPuppyService;
 import com.whaleshark.basicarch.model.Recipe;
 import com.whaleshark.basicarch.model.RecipeSearchResult;
 import com.whaleshark.basicarch.ui.common.RecipeListAdapter;
+import com.whaleshark.basicarch.util.TextChangedListener;
 
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         EditText editText = findViewById(R.id.edit_text);
-        editText.addTextChangedListener(new TextWatcher() {
+        editText.addTextChangedListener(new TextChangedListener() {
             @Override
             public void afterTextChanged(Editable s) {
                 if (s.length() == 0 ) {
@@ -72,12 +73,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
-
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
         });
     }
 }
