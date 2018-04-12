@@ -9,10 +9,6 @@ import com.whaleshark.basicarch.databinding.RecipeItemBinding;
 import com.whaleshark.basicarch.model.Recipe;
 import com.whaleshark.basicarch.util.Objects;
 
-/**
- * @author stipton
- */
-
 public class RecipeListAdapter extends DataBoundListAdapter<Recipe, RecipeItemBinding> {
     private final RecipeClickCallback repoClickCallback;
 

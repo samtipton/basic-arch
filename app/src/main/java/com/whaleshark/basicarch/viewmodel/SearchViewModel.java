@@ -40,7 +40,7 @@ public class SearchViewModel extends ViewModel {
             foodPuppyService.searchRecipes(query).enqueue(new Callback<RecipeSearchResult>() {
                 @Override
                 public void onResponse(Call<RecipeSearchResult> call, Response<RecipeSearchResult> response) {
-                    resultsMediator.postValue(response.body().results);
+                    resultsMediator.postValue(response.body() != null ? response.body().results : null);
                 }
 
                 @Override

@@ -24,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        final RecyclerView recyclerView = findViewById(R.id.repo_recycler);
+        RecyclerView recyclerView = findViewById(R.id.repo_recycler);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+
         final RecipeListAdapter adapter = new RecipeListAdapter(recipe -> Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_SHORT).show());
         recyclerView.setAdapter(adapter);
 

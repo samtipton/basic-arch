@@ -1,7 +1,5 @@
 package com.whaleshark.basicarch.api;
 
-import android.arch.lifecycle.LiveData;
-
 import com.whaleshark.basicarch.model.RecipeSearchResult;
 
 import retrofit2.Call;
