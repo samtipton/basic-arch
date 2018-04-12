@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         editText.addTextChangedListener(new TextChangedListener() {
             @Override
             public void afterTextChanged(Editable s) {
-                if (s.length() == 0 ) {
+                if (s.length() == 0) {
                     adapter.replace(null);
                     return;
                 }
