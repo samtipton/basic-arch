@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(Call<RecipeSearchResult> call, Response<RecipeSearchResult> response) {
                         Log.d(TAG, "onResponse: " + response.isSuccessful());
                         if (response.isSuccessful()) {
-                            adapter.replace(response.body().results);
+                            adapter.replace(response.body().getResults());
                         }
                     }
 

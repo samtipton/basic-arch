@@ -1,4 +1,4 @@
-package com.whaleshark.basicarch.ui.common;
+package com.whaleshark.basicarch.ui.common
 
 /*
  * Copyright (C) 2017 The Android Open Source Project
@@ -16,17 +16,11 @@ package com.whaleshark.basicarch.ui.common;
  * limitations under the License.
  */
 
-import android.databinding.ViewDataBinding;
-import android.support.v7.widget.RecyclerView;
+import android.databinding.ViewDataBinding
+import android.support.v7.widget.RecyclerView
 
 /**
- * A generic ViewHolder that works with a {@link ViewDataBinding}.
+ * A generic ViewHolder that works with a [ViewDataBinding].
  * @param <T> The type of the ViewDataBinding.
- */
-public class DataBoundViewHolder<T extends ViewDataBinding> extends RecyclerView.ViewHolder {
-    public final T binding;
-    DataBoundViewHolder(T binding) {
-        super(binding.getRoot());
-        this.binding = binding;
-    }
-}
+</T> */
+class DataBoundViewHolder<T : ViewDataBinding> internal constructor(val binding: T) : RecyclerView.ViewHolder(binding.root)

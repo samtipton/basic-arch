@@ -41,13 +41,13 @@ public class RecipeListAdapter extends DataBoundListAdapter<Recipe, RecipeItemBi
 
     @Override
     protected boolean areItemsTheSame(Recipe oldItem, Recipe newItem) {
-        return Objects.equals(oldItem.title, newItem.title) &&
-                Objects.equals(oldItem.title, newItem.title);
+        return Objects.INSTANCE.equals(oldItem.getTitle(), newItem.getTitle()) &&
+                Objects.INSTANCE.equals(oldItem.getTitle(), newItem.getTitle());
     }
 
     @Override
     protected boolean areContentsTheSame(Recipe oldItem, Recipe newItem) {
-        return Objects.equals(oldItem.title, newItem.title) && oldItem.ingredients.equals(newItem.ingredients);
+        return Objects.INSTANCE.equals(oldItem.getTitle(), newItem.getTitle()) && oldItem.getIngredients().equals(newItem.getIngredients());
     }
 
     public interface RecipeClickCallback {
