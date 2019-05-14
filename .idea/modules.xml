@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BasicArch.iml" filepath="$PROJECT_DIR$/BasicArch.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-arch.iml" filepath="$PROJECT_DIR$/basic-arch.iml" />
     </modules>
   </component>
 </project>
