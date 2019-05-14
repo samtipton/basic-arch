@@ -24,12 +24,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SearchViewModel extends ViewModel {
 
-    private final FoodPuppyService foodPuppyService = new Retrofit.Builder()
-            .baseUrl("http://www.recipepuppy.com/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(new LiveDataCallAdapterFactory())
-            .build()
-            .create(FoodPuppyService.class);
+    private final FoodPuppyService foodPuppyService = FoodPuppyService.Factory.create();
 
     private MutableLiveData<String> query = new MutableLiveData<>();
     private MediatorLiveData<List<Recipe>> resultsMediator = new MediatorLiveData<>();
