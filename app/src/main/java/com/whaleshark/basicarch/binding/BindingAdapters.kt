@@ -9,10 +9,14 @@ import com.bumptech.glide.Glide
  * @author stipton
  */
 
-object BindingAdapters {
+class BindingAdapters {
 
-    @BindingAdapter("imageUrl")
-    fun bindImage(imageView: ImageView, url: String) {
-        Glide.with(imageView).load(url).into(imageView)
+    companion object {
+
+        @JvmStatic
+        @BindingAdapter("imageUrl")
+        fun bindImage(imageView: ImageView, url: String) {
+            Glide.with(imageView).load(url).into(imageView)
+        }
     }
 }
